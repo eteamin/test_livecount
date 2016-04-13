@@ -10,9 +10,10 @@ def test_live_count():
         id_count_pairs.add((item['Id'], item['ViewCount']))
     try:
         assert len(id_count_pairs) is len(response)
-        crow.deliver("No Duplicates in http://api.varzesh3.com/v0.2/news/live/0")
+        # crow.deliver("No Duplicates in http://api.varzesh3.com/v0.2/news/live/0")
     except Exception as ex:
-        crow.deliver(str(ex))
+        crow.deliver('Something went wrong with testing no duplicate assertion of '
+                     ' http://api.varzesh3.com/v0.2/news/live/0 items: %s Indicating there are duplicates' % str(type(ex)))
 
 
 if __name__ == '__main__':

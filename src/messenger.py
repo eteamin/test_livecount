@@ -12,4 +12,5 @@ class Messenger(object):
             'text': text,
             'channel': self.receiving_channel
         }
-        requests.post('http://crow.farakav.com/api/message', json=message)
+        response = requests.post('http://crow.farakav.com/api/message', json=message)
+        print(response.json())
