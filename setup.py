@@ -33,4 +33,9 @@ setup(
     packages=find_packages(exclude=['ez_setup']),
     install_requires=install_requires,
     include_package_data=True,
+    entry_points={
+        'console_scripts': [
+            'test_livecount = src:main'
+        ]
+    },
 )
