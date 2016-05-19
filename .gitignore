@@ -59,3 +59,4 @@ docs/_build/
 target/
 .idea
 # Created by .ignore support plugin (hsz.mobi)
+*.py~
